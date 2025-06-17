@@ -174,7 +174,7 @@
             this.btnElaveEt.Name = "btnElaveEt";
             this.btnElaveEt.Size = new System.Drawing.Size(166, 37);
             this.btnElaveEt.TabIndex = 24;
-            this.btnElaveEt.Text = "Əlavə et";
+            this.btnElaveEt.Text = "Göstər";
             this.btnElaveEt.UseVisualStyleBackColor = false;
             this.btnElaveEt.Click += new System.EventHandler(this.btnElaveEt_Click);
             // 

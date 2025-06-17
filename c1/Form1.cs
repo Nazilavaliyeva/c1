@@ -35,10 +35,10 @@ namespace c1
                     txtTarix.Text = "11.04.2016";
                     txtMilliyyet.Text = "Azerbaycanli";
                 }
-                else if(secim == "Elman Qasimov")
+                else if(secim == "Elman Agayev")
                 {
                     txtAd.Text = "Elman";
-                    txtSoyad.Text = "Qasimov";
+                    txtSoyad.Text = "Agayev";
                     txtTarix.Text = "15.04.2001";
                     txtMilliyyet.Text = "Azerbaycanli";
                 }
