@@ -42,11 +42,18 @@ namespace c1
                     txtTarix.Text = "15.04.2001";
                     txtMilliyyet.Text = "Azerbaycanli";
                 }
+                else
+                {
+                    MessageBox.Show("Məlumat tapilmadı", "Xeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }   
+
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Xeta bas verdi, xahiş edirik yenidən cəhd edin.", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Xəta: " + ex.Message, "Xeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
 
         }
          
