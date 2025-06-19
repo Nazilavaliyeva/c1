@@ -38,7 +38,6 @@
             this.txtTarix = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
-            this.btnTemizle = new System.Windows.Forms.Button();
             this.btnElaveEt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,20 +46,21 @@
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(407, 9);
+            this.label5.Location = new System.Drawing.Point(12, 329);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 29);
             this.label5.TabIndex = 35;
             this.label5.Text = "Seçim edin";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(412, 45);
+            this.comboBox1.Location = new System.Drawing.Point(17, 361);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 33);
+            this.comboBox1.Size = new System.Drawing.Size(350, 33);
             this.comboBox1.TabIndex = 34;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -146,33 +146,20 @@
             this.txtAd.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAd.Location = new System.Drawing.Point(15, 45);
+            this.txtAd.Location = new System.Drawing.Point(15, 41);
             this.txtAd.Multiline = true;
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(350, 32);
             this.txtAd.TabIndex = 26;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.BackColor = System.Drawing.Color.Red;
-            this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTemizle.Location = new System.Drawing.Point(201, 333);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(164, 35);
-            this.btnTemizle.TabIndex = 25;
-            this.btnTemizle.Text = "Təmizlə";
-            this.btnTemizle.UseVisualStyleBackColor = false;
-            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnElaveEt
             // 
             this.btnElaveEt.BackColor = System.Drawing.Color.LimeGreen;
             this.btnElaveEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnElaveEt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElaveEt.Location = new System.Drawing.Point(17, 331);
+            this.btnElaveEt.Location = new System.Drawing.Point(17, 414);
             this.btnElaveEt.Name = "btnElaveEt";
-            this.btnElaveEt.Size = new System.Drawing.Size(166, 37);
+            this.btnElaveEt.Size = new System.Drawing.Size(348, 37);
             this.btnElaveEt.TabIndex = 24;
             this.btnElaveEt.Text = "Göstər";
             this.btnElaveEt.UseVisualStyleBackColor = false;
@@ -183,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(598, 379);
+            this.ClientSize = new System.Drawing.Size(488, 454);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
@@ -194,7 +181,6 @@
             this.Controls.Add(this.txtTarix);
             this.Controls.Add(this.txtSoyad);
             this.Controls.Add(this.txtAd);
-            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnElaveEt);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -217,7 +203,6 @@
         private System.Windows.Forms.TextBox txtTarix;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
-        private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.Button btnElaveEt;
     }
 }

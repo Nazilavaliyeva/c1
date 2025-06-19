@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace c1
@@ -15,64 +9,49 @@ namespace c1
         public Form1()
         {
             InitializeComponent();
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
+        private List<string[]> melumatlar = new List<string[]>();
 
         private void btnElaveEt_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                string secim = comboBox1.Text;
-                if (secim == "Ali Valiyev")
-                {
-                    txtAd.Text = "Ali";
-                    txtSoyad.Text = "Valiyev";
-                    txtTarix.Text = "11.04.2016";
-                    txtMilliyyet.Text = "Azerbaycanli";
-                }
-                else if(secim == "Elman Agayev")
-                {
-                    txtAd.Text = "Elman";
-                    txtSoyad.Text = "Agayev";
-                    txtTarix.Text = "15.04.2001";
-                    txtMilliyyet.Text = "Azerbaycanli";
-                }
-                else
-                {
-                    MessageBox.Show("Məlumat tapilmadı", "Xeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }   
+            string ad = txtAd.Text;
+            string soyad = txtSoyad.Text;
+            string dogum = txtTarix.Text;
+            string olke = txtMilliyyet.Text;
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Xəta: " + ex.Message, "Xeta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string[] melumat = new string[] { ad, soyad, dogum, olke };
+            melumatlar.Add(melumat);
+            comboBox1.Items.Add(ad + " " + soyad);
+            MessageBox.Show("Əlavə olundu: " + melumatlar.Count + " nəfər");
 
-
-
-        }
-         
-           
-
-            
-
-        private void btnTemizle_Click(object sender, EventArgs e)
-        {
             txtAd.Clear();
             txtSoyad.Clear();
             txtTarix.Clear();
-            txtMilliyyet.Clear();   
+            txtMilliyyet.Clear();
+            txtAd.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Ali Valiyev");
-            comboBox1.Items.Add("Elman Qasimov");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBox1.SelectedIndex;
+            if (index >= 0 && index < melumatlar.Count)
+            {
+                string[] secilmis = melumatlar[index];
+                txtAd.Text = secilmis[0];
+                txtSoyad.Text = secilmis[1];
+                txtTarix.Text = secilmis[2];
+                txtMilliyyet.Text = secilmis[3];
+            }
         }
     }
 }
